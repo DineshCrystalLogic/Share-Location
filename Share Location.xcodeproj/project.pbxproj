@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B44AD9771E65A93300FE698C /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AD9761E65A93300FE698C /* ListVC.swift */; };
+		B44AD9791E65A9C900FE698C /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AD9781E65A9C900FE698C /* MapVC.swift */; };
+		B44AD97D1E65B06800FE698C /* ListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AD97C1E65B06800FE698C /* ListTableView.swift */; };
 		B4DDF7DE1E654E0F00880363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DDF7DD1E654E0F00880363 /* AppDelegate.swift */; };
 		B4DDF7E01E654E0F00880363 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DDF7DF1E654E0F00880363 /* ViewController.swift */; };
 		B4DDF7E31E654E0F00880363 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4DDF7E11E654E0F00880363 /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B44AD9761E65A93300FE698C /* ListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
+		B44AD9781E65A9C900FE698C /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		B44AD97C1E65B06800FE698C /* ListTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableView.swift; sourceTree = "<group>"; };
 		B4DDF7DA1E654E0F00880363 /* Share Location.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Share Location.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4DDF7DD1E654E0F00880363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4DDF7DF1E654E0F00880363 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +80,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B44AD9611E65574700FE698C /* UTILITY */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = UTILITY;
+			sourceTree = "<group>";
+		};
+		B44AD97E1E65B5F700FE698C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B4DDF7DF1E654E0F00880363 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B44AD97F1E65B61200FE698C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B44AD9761E65A93300FE698C /* ListVC.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B44AD9801E65B62600FE698C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		B4DDF7D11E654E0F00880363 = {
 			isa = PBXGroup;
 			children = (
@@ -98,9 +134,14 @@
 			isa = PBXGroup;
 			children = (
 				B4DDF7DD1E654E0F00880363 /* AppDelegate.swift */,
-				B4DDF7DF1E654E0F00880363 /* ViewController.swift */,
+				B44AD9781E65A9C900FE698C /* MapVC.swift */,
+				B44AD97C1E65B06800FE698C /* ListTableView.swift */,
 				B4DDF7E11E654E0F00880363 /* Main.storyboard */,
+				B44AD9801E65B62600FE698C /* Model */,
+				B44AD97F1E65B61200FE698C /* View */,
+				B44AD97E1E65B5F700FE698C /* Controller */,
 				B4DDF7E41E654E0F00880363 /* Assets.xcassets */,
+				B44AD9611E65574700FE698C /* UTILITY */,
 				B4DDF7E61E654E0F00880363 /* LaunchScreen.storyboard */,
 				B4DDF7E91E654E0F00880363 /* Info.plist */,
 			);
@@ -259,7 +300,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B44AD9771E65A93300FE698C /* ListVC.swift in Sources */,
+				B44AD9791E65A9C900FE698C /* MapVC.swift in Sources */,
 				B4DDF7E01E654E0F00880363 /* ViewController.swift in Sources */,
+				B44AD97D1E65B06800FE698C /* ListTableView.swift in Sources */,
 				B4DDF7DE1E654E0F00880363 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +549,7 @@
 				B4DDF8041E654E0F00880363 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4DDF8051E654E0F00880363 /* Build configuration list for PBXNativeTarget "Share LocationTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +558,7 @@
 				B4DDF8071E654E0F00880363 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4DDF8081E654E0F00880363 /* Build configuration list for PBXNativeTarget "Share LocationUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +567,7 @@
 				B4DDF80A1E654E0F00880363 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

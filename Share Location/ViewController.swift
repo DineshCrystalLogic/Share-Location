@@ -8,18 +8,44 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
+    //MARK:IBOUTLETS
+    @IBOutlet weak var MAPContainerView: UISegmentedControl!
 
-    override func viewDidLoad() {
+    @IBOutlet weak var MAPContainer: UIView!
+    @IBOutlet weak var LISTContainer: UIView!
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func showComponent(sender: UISegmentedControl)
+    {
+        if sender.selectedSegmentIndex == 0
+        
+        {
+            UIView.animate(withDuration: 0.5, animations:
+                {
+                self.MAPContainer.alpha = 1
+                self.LISTContainer.alpha = 0
+            })
+        }
+        else
+        {
+            UIView.animate(withDuration: 0.5, animations:
+                {
+                self.MAPContainer.alpha = 0
+                self.LISTContainer.alpha = 1
+            })
+        }
+    }
+    
 
 }
 
