@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
@@ -15,10 +17,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
     var window: UIWindow?
 
+    fileprivate func createMenuView()
+    {
+        
+        // create viewController code...
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let mainViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        let leftViewController = storyboard.instantiateViewController(withIdentifier: "LeftViewController") as! LeftViewController
+       // let rightViewController = storyboard.instantiateViewController(withIdentifier: "RightViewController") as! RightViewController
+        
+       let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        
+        UINavigationBar.appearance().tintColor = UIColor(hex: "689F38")
+        
+        leftViewController.mainViewController = nvc
+        
+        let slideMenuController = ExSlideMenuController(mainViewController:nvc, rightMenuViewController: leftViewController)
+        slideMenuController.automaticallyAdjustsScrollViewInsets = true
+        slideMenuController.delegate = mainViewController
+        self.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)
+        self.window?.rootViewController = slideMenuController
+        self.window?.makeKeyAndVisible()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
-        // Override point for customization after application launch.
+        self.createMenuView()
+        GMSServices.provideAPIKey("AIzaSyDE5U7_crvuhjHefI9PL-2v_akJbB3U5lE")
+        GMSPlacesClient.provideAPIKey("AIzaSyDE5U7_crvuhjHefI9PL-2v_akJbB3U5lE")
         return true
     }
 
